@@ -1,0 +1,41 @@
+3 services we need 
+1. AccountAPI
+    applicationURL : localhost:4002
+    dotnet add package Swashbuckle.AspNetCore --version 6.3.0
+    dotnet add package Consul --version 1.6.10.4
+
+    "ServiceName" : "AccountMicroservice",
+    "ServiceID" : "3000",
+
+2. ProductAPI
+   applicationURL : localhost:4001
+   dotnet add package Swashbuckle.AspNetCore --version 6.3.0
+   dotnet add package Consul --version 1.6.10.4
+
+    "ServiceName" : "ProductMicroservice",
+    "ServiceID" : "1000"
+
+3. OrderAPi
+    applicationURL : localhost:4003
+    dotnet add package Swashbuckle.AspNetCore --version 6.3.0
+    dotnet add package Consul --version 1.6.10.4
+    
+    "ServiceName" : "OrderMicroservice",
+    "ServiceID" : "2000"
+
+1 APIGateway that is the single entry point for the application
+    dotnet add package Ocelot --version 18.0.0
+    applicationURL : localhost:4000
+
+Servcie Discovery
+    -> Consul
+    -> Running on localhost port 8500
+
+
+
+
+DOUBTS TO ASK
+1. Product microservice was not deregistering itself after the application is not in 
+running state.
+
+
